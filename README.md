@@ -23,7 +23,9 @@
 - fetch data from trailer vid
 - update store with trailervid data
 - embeded youtube and autoplayed it
--
+- secondry container with movie lists 
+- hooks 
+- build movie card
 # Features
 - Login / Sign up
   - Sign in / Sign up form
