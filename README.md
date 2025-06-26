@@ -2,8 +2,28 @@
 - Creat React App
 - Configure Tailwind
 - Header
+- Routing
 - Login form
-
+- Form Validation
+- useRef Hook
+- Firebase setup
+- Deploying our app for production
+- Create Signup user account
+- Implement sign in user API
+- created redux store with userSlice
+- bug fix: sign up user display name and profile picture update
+- bug fix: redirect to login page if not signed in
+- unsubsctibed from Onauth callback
+- Register TMDB API and get API key and token
+- get data from movie lists
+- Custom Hook for now playing movies
+- create Movie Slice
+- updat store with movies data
+- Planning for main container and secondry container
+- fetch data from trailer vid
+- update store with trailervid data
+- embeded youtube and autoplayed it
+-
 # Features
 - Login / Sign up
   - Sign in / Sign up form
