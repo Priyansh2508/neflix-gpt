@@ -10,7 +10,7 @@ export const API_OPTIONS={
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjYzcyYzU5ZGMwZTA1NWI5MzgzNzk3N2JlOGJlZDgzOSIsIm5iZiI6MTc1MDg0Njg4Mi42NjEsInN1YiI6IjY4NWJjZGEyZGMwMTlkMmFhZWFmYTViMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2SqaoIGIAX7_huXs9WmTHLWmSZ46gx-SWjLc1XSMv1c'
+    Authorization: 'Bearer ' + process.env.REACT_APP_TMDB_KEY,
   }
 };
 
@@ -24,7 +24,7 @@ export const SUPPORTED_LANGUAGES = [
   { code: "spanish", name: "Spanish" }
 ];
 
-export const OPENAI_KEY="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";
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
 
-export const GENAI_KEY="AIzaSyB6_20H0bW-K-Alt-uPr8To3O7D-Jna00c";
+export const GENAI_KEY= process.env.REACT_APP_GENAI_KEY;
 
