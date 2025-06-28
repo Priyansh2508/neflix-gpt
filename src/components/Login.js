@@ -89,9 +89,9 @@ const toggleSignInForm = () => {
     <div className="bg-gray-100">
      <Header/>
      <div>
-         <img className="absolute w-full h-auto" src={BG_URL} />
+         <img className="absolute w-full h-screen object-cover" src={BG_URL} />
      </div>
-     <form className="absolute bg-black my-36 w-3/12 mx-auto right-0 left-0 bg-opacity-75 rounded-lg shadow-lg h-auto"
+     <form className="absolute bg-black my-36 w-9/12 md:w-3/12 mx-auto right-0 left-0 bg-opacity-75 rounded-lg shadow-lg h-auto"
      onSubmit={(e) =>e.preventDefault() }     
      >
      <h1 className="font-bold text-white m-2 p-4 text-3xl text-center">{isSignInForm ? "Sign In":"Sign Up"  }</h1>

@@ -24,7 +24,7 @@ export const SUPPORTED_LANGUAGES = [
   { code: "spanish", name: "Spanish" }
 ];
 
-
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
 
 export const GENAI_KEY= process.env.REACT_APP_GENAI_KEY;
 

@@ -54,8 +54,8 @@ const handleGptSearchClick = async () => {
 
 
     return (
-        <div className="flex justify-center items-center ">
-          <form className="p-6 bg-black mt-[10%] w-9/12 rounded-3xl bg-opacity-60 flex justify-center"
+        <div className="flex justify-center items-center pt-[30%] md:pt-0">
+          <form className="p-6 bg-black mt-[10%] w-full md:w-9/12 rounded-3xl bg-opacity-0 flex justify-center"
           onSubmit={(e) => {
             e.preventDefault();
             // Handle search submission logic here

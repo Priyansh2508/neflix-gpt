@@ -54,9 +54,9 @@ const Header = () => {
   }
 
   return (
-    <div className="absolute z-10 w-screen px-4 py-2 flex justify-between items-center">
+    <div className="absolute z-10 w-screen px-4 py-2 flex justify-between items-center flex-col md:flex-row">
       <img
-        className="w-36 h-20"
+        className="w-36 h-20 z-30"
         src= "https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production/consent/87b6a5c0-0104-4e96-a291-092c11350111/01938dc4-59b3-7bbc-b635-c4131030e85f/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
         alt="Logo"
       />
@@ -72,13 +72,13 @@ const Header = () => {
         ))}
         </select>
         )}              
-        <button className="flex items-center m-4 h-8  justify-center bg-blue-600 text-white px-4 py-2 rounded"
+        <button className="flex items-center m-4 h-8 justify-center bg-blue-600 text-white px-4 py-2 rounded"
         onClick={handleGptSearchClick}
         >
           {showGptSearch?"Homepage":"GPT Search"}
           </button>
         <img
-          className="w-9 h-9 rounded mr-2"
+          className="w-9 h-9 rounded mr-2 "
           alt="usericon"
           src="https://www.citypng.com/public/uploads/preview/profile-user-round-white-icon-symbol-png-701751695033499brrbuebohc.png"
         />
