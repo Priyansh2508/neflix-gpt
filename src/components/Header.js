@@ -6,12 +6,17 @@ import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth"; // Import onAuthStateChanged to
-import { LOGO } from "../utils/constants";
+import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
+import { toggleGptSearchView } from "../utils/gptSlice";
+import { changeLanguage } from "../utils/configSlice";
 
 const Header = () => {
+  const dispatch = useDispatch(); // Import useDispatch from react-redux
   const navigate = useNavigate(); // Get the navigate function
   const user= useSelector((store) => store.user); // Access user data from Redux store
-  const dispatch = useDispatch(); // Import useDispatch from react-redux
+  const showGptSearch=useSelector((store) => store.gpt.showGptSearch); // Access GPT search view state from Redux store
+
+  
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -38,6 +43,16 @@ const Header = () => {
       return () => unsubscribe(); // cleanup listener on unmount
     }, [dispatch]);
 
+    const handleGptSearchClick = () => {
+      // Navigate to GPT search page
+      dispatch(toggleGptSearchView());
+    };
+
+  const handleLanguageChange = (event) => {
+    console.log("Language changed to:", event.target.value);
+    dispatch(changeLanguage(event.target.value));
+  }
+
   return (
     <div className="absolute z-10 w-screen px-4 py-2 flex justify-between items-center">
       <img
@@ -48,12 +63,26 @@ const Header = () => {
 
       {user &&
       (<div className="flex items-center">
+       {showGptSearch && ( 
+        <select className="m-2 h-8 bg-black bg-opacity-0 hover:cursor-pointer text-white rounded px-2" onChange={handleLanguageChange}>
+       {SUPPORTED_LANGUAGES.map((lang) => (
+          <option key={lang.code} value={lang.code}>
+            {lang.name}
+          </option>
+        ))}
+        </select>
+        )}              
+        <button className="flex items-center m-4 h-8  justify-center bg-blue-600 text-white px-4 py-2 rounded"
+        onClick={handleGptSearchClick}
+        >
+          {showGptSearch?"Homepage":"GPT Search"}
+          </button>
         <img
-          className="w-10 h-10 rounded mr-2"
+          className="w-9 h-9 rounded mr-2"
           alt="usericon"
-          src={user?.photoURL}
+          src="https://www.citypng.com/public/uploads/preview/profile-user-round-white-icon-symbol-png-701751695033499brrbuebohc.png"
         />
-        <button onClick={handleSignOut} className=" text-white bg-red-600 h-8 rounded-sm w-16">
+        <button onClick={handleSignOut} className=" text-white bg-red-600 h-8 rounded-sm w-16 text-center hover:bg-red-700">
           sign out
         </button>
       </div>)}

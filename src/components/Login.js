@@ -8,7 +8,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
-import { USER_AVATAR } from '../utils/constants';
+import { BG_URL, USER_AVATAR } from '../utils/constants';
 
 
 const Login = () => {
@@ -89,7 +89,7 @@ const toggleSignInForm = () => {
     <div className="bg-gray-100">
      <Header/>
      <div>
-         <img className="absolute w-full h-auto" src="https://repository-images.githubusercontent.com/299409710/b42f7780-0fe1-11eb-8460-e459acd20fb4"/>
+         <img className="absolute w-full h-auto" src={BG_URL} />
      </div>
      <form className="absolute bg-black my-36 w-3/12 mx-auto right-0 left-0 bg-opacity-75 rounded-lg shadow-lg h-auto"
      onSubmit={(e) =>e.preventDefault() }     

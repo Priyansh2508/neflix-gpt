@@ -26,6 +26,11 @@
 - secondry container with movie lists 
 - hooks 
 - build movie card
+- GPT search feature
+- GPT Search Bar
+- Multi Language feature in GPT page
+- 
+
 # Features
 - Login / Sign up
   - Sign in / Sign up form
