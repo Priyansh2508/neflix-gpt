@@ -29,7 +29,13 @@
 - GPT search feature
 - GPT Search Bar
 - Multi Language feature in GPT page
-- 
+- Made ui for search bar
+- set gemini api to get movies
+- got the movies poster through tmdb api of the the searched movies
+- Built ui for movie suggestions
+- secured our gemini key through env file and gitignore
+- optimized it to reduce the api calls
+- applied the css foe mobile phones as well
 
 # Features
 - Login / Sign up
